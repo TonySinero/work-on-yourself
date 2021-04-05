@@ -1,4 +1,7 @@
 listin = [15, 56, 64, 561, 9, 94, 12, ]
+z = list(map(lambda x: x * (-2), listin))
+print(z)
+
 listen2 = []
 for x in listin:
     x *= (-2)
@@ -43,9 +46,13 @@ print(count)
 
 #-----------------------------------
 
-mai = {'test': 'test_value', 'europe': 'eur', 'dollar': 'usd', 'ruble': 'rub'}
-dgdr = {key + str(len(key)):value for key,value in mai.items()}
-print(f'{dgdr}')
+
+def uvi(**kwargs):
+    dgdr = {key + str(len(key)):value for key,value in kwargs.items()}
+    print(f'{dgdr}')
+
+
+uvi(mai=45)
 
 #------------------------------------------------
 
